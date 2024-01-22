@@ -139,26 +139,26 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    // const form = document.querySelector('#form');
-    // const submit = document.querySelector('.submit');
-    // const input = document.querySelectorAll('input');
-    // const result = document.querySelector('.result-head');
-    // form.addEventListener('click', function(e){
-    //     if(e.target.classList.contains('submit')){
-    //         input.forEach(function(inputed){
-    //             inputed.disabled = true;
-    //             function redirectToAnotherPage() {
-    //                 // Add a delay of 5 seconds (5000 milliseconds)
-    //                 setTimeout(function() {
-    //                   // Replace 'your-target-url' with the actual URL you want to redirect to
-    //                   window.location.href = 'https://app.skweezer.net/register';
-    //                 }, 1000);
-    //               }
-    //             result.innerHTML = 'Your request is processing';
-    //             submit.value = 'Processing...'
-    //         })
-    //     }
-    // })
+    const form = document.querySelector('#form');
+    const submit = document.querySelector('.submit');
+    const input = document.querySelectorAll('input');
+    const result = document.querySelector('.result-head');
+    form.addEventListener('click', function(e){
+        if(e.target.classList.contains('submit')){
+            input.forEach(function(inputed){
+                inputed.disabled = true;
+                function redirectToAnotherPage() {
+                    // Add a delay of 5 seconds (5000 milliseconds)
+                    setTimeout(function() {
+                      // Replace 'your-target-url' with the actual URL you want to redirect to
+                      window.location.href = 'https://app.skweezer.net/register';
+                    }, 1000);
+                  }
+                result.innerHTML = 'Your request is processing';
+                submit.value = 'Processing...'
+            })
+        }
+    })
     const handleSubmit = (event) => {
         event.preventDefault();
         alert("Thank you for your submission");
