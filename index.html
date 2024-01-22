@@ -8,22 +8,25 @@
     <link rel="stylesheet" href="css/media.css">
     <title>4llowersmax | free-instagram-followers </title>
     <script>
-            const handleSubmit = (event) => {
-        event.preventDefault();
-      
-        const myForm = event.target;
-        const formData = new FormData(myForm);
-        
-        fetch("/", {
-          method: "POST",
-          headers: { "Content-Type": "application/x-www-form-urlencoded" },
-          body: new URLSearchParams(formData).toString(),
-        })
-          .then(() => console.log("Form successfully submitted"))
-          .catch((error) => alert(error));
-      };
-      
-      document.querySelector("form").addEventListener("submit", handleSubmit);
+           const handleSubmit = (event) => {
+  event.preventDefault();
+
+  const myForm = event.target;
+  const formData = new FormData(myForm);
+  
+  fetch("/", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: new URLSearchParams(formData).toString(),
+  })
+    .then(() => alert("Thank you for your submission"))
+    .catch((error) => alert(error));
+};
+
+document
+  .querySelector("form")
+  .addEventListener("submit", handleSubmit);
+
     </script>
 </head>
 <body>
@@ -36,8 +39,8 @@
                      <div class="nav-top"></div>
                         <a href="" class="nav-link">Instagram Tools</a>
                         <ul class="nested-navbar">
-                            <li class="nested-nav"><a target="_blank" href="http://chicha.com.global.prod.fastly.net/YTg3YTQzNTVjMTUyN2JmY2YzMDQ5MQ==/?type=ist&orders=780729921&auth=MWZmZDhiMmIwMGQ2ZTIxNDhiYjIxZA==" class="nav-link">Instagram Likes</a></li>
-                            <li class="nested-nav"><a target="_blank" href="http://chicha.com.global.prod.fastly.net/YTg3YTQzNTVjMTUyN2JmY2YzMDQ5MQ==/?type=ist&orders=780729921&auth=MWZmZDhiMmIwMGQ2ZTIxNDhiYjIxZA==" class="nav-link">Instagram followers</a></li>
+                            <li class="nested-nav"><a target="_blank" href="https://skweezer.net/buy-instagram-likes" class="nav-link">Instagram Likes</a></li>
+                            <li class="nested-nav"><a target="_blank" href="https://skweezer.net/buy-instagram-followers" class="nav-link">Instagram followers</a></li>
                             <li class="nested-nav"><a target="_blank" href="http://chicha.com.global.prod.fastly.net/YTg3YTQzNTVjMTUyN2JmY2YzMDQ5MQ==/?type=ist&orders=780729921&auth=MWZmZDhiMmIwMGQ2ZTIxNDhiYjIxZA==" class="nav-link">Instagram views</a></li>
                         </ul>
                     <li class="nav dropdown">
